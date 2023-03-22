@@ -8,6 +8,12 @@ module.exports = {
     return [
       {
         source: '/post/:id',
+        missing: [
+          {
+            type: 'header',
+            key: 'Next-Router-Prefetch',
+          }
+        ],
         headers: [
           {
             key: 'Cache-Control',
