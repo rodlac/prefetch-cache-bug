@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import Post from '@/types/Post'
 
+export async function generateStaticParams() {
+  return [];
+}
+
 async function getPost(id: number): Promise<Post> {
   console.log(`POST: ${id}`)
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {

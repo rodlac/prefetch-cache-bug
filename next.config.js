@@ -4,17 +4,4 @@ module.exports = {
   experimental: {
     appDir: true,
   },
-  async headers() {
-    return [
-      {
-        source: '/post/:id',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, s-maxage=60',
-          },
-        ],
-      },
-    ]
-  },
 }
